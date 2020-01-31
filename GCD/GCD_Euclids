@@ -1,0 +1,17 @@
+def gcd(m,n):
+
+    if m < n:
+        s = m
+        m = n
+        n = s
+    
+    if m % n == 0:
+        return n
+    else:
+        diff = m - n
+        return(gcd(max(n,diff),min(n,diff)))
+
+
+    
+result = gcd(8,12)
+print(result)
