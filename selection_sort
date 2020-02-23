@@ -1,0 +1,13 @@
+def selection_sort(l):
+    for first in range(len(l)):
+        minpos = first
+        for i in range(first,len(l)):
+            if l[i] < l[minpos]:
+                minpos = i
+        (l[first],l[minpos]) = (l[minpos],l[first])    
+    return l
+
+
+
+l = [6,7,3,5,0,1,2]
+print(selection_sort(l))
