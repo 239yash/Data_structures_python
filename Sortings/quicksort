@@ -1,0 +1,19 @@
+def quicksort(A,start,end):
+  if end-start <= 1:
+    return
+  small = start+1
+
+  for big in range(start+1,end):
+    if A[big] <= A[start]:
+      (A[small],A[big]) = (A[big],A[small])
+      small = small + 1
+
+  (A[start],A[small-1]) = (A[small-1],A[start])
+
+  quicksort(A,start,small-1)
+  quicksort(A,small,end)
+  return A 
+
+c = [1,4,6,2,3,8,7,9]
+print(quicksort(c,0,7))     
+  
