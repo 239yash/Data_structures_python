@@ -1,2 +1,2 @@
-# python_practice
-programs on python
+# Data_structures_python
+
